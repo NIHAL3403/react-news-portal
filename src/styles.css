@@ -1,0 +1,25 @@
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.article-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: calc(33.333% - 2rem);
+}
+
+.article-item img {
+  max-width: 100%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  margin: 0 0.5rem;
+}

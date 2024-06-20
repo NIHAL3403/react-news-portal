@@ -11,9 +11,9 @@ const Pagination = ({ currentPage, onPageChange }) => {
 
   return (
     <div className="pagination">
-      <button onClick={handlePrevious} disabled={currentPage === 1}>Previous</button>
-      <span>Page {currentPage}</span>
-      <button onClick={handleNext}>Next</button>
+      <button className="btn btn-secondary" onClick={handlePrevious} disabled={currentPage === 1}>Previous</button>
+      <span className="mx-2">Page {currentPage}</span>
+      <button className="btn btn-secondary" onClick={handleNext}>Next</button>
     </div>
   );
 };

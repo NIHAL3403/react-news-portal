@@ -22,7 +22,7 @@ const HomePage = () => {
             apiKey: API_KEY,
             page: page,
             category: category,
-            country: 'us' // Adding a default country parameter to reduce chances of bad request
+            country: 'us'
           },
         });
         if (response.status === 200) {
@@ -44,14 +44,16 @@ const HomePage = () => {
   if (error) return <p>Error fetching articles: {error}</p>;
 
   return (
-    <div>
-      <h1>News Portal</h1>
-      <select onChange={(e) => setCategory(e.target.value)} value={category}>
-        <option value="">All</option>
-        <option value="business">Business</option>
-        <option value="technology">Technology</option>
-        <option value="entertainment">Entertainment</option>
-      </select>
+    <div className="container">
+      <h1 className="my-4">News Portal</h1>
+      <div className="mb-3">
+        <select className="form-select" onChange={(e) => setCategory(e.target.value)} value={category}>
+          <option value="">All</option>
+          <option value="business">Business</option>
+          <option value="technology">Technology</option>
+          <option value="entertainment">Entertainment</option>
+        </select>
+      </div>
       <ArticleList articles={articles} />
       <Pagination currentPage={page} onPageChange={setPage} />
     </div>

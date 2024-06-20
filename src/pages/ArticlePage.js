@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
 const ArticlePage = () => {
-  const { id } = useParams();
+
   const location = useLocation();
   const article = location.state?.article;
 
